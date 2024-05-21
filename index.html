@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div
+        class="menu-icon"
+        style="font-size: 40px; color: darkslategray"
+        onclick="toggleMenu()"
+      >
+        &#9776;
+        <!-- Hamburger icon -->
+      </div>
+      <div
+        class="close-icon"
+        style="font-size: 40px; color: darkslategray; z-index: 1"
+        onclick="toggleMenu()"
+      >
+        &#10006;
+        <!-- Close icon -->
+      </div>
+
+      <ul id="menuList">
+        <li><a href="#" style="color: #11da9f">Home</a></li>
+        <li><a href="#">Matching</a></li>
+        <li><a href="#">Talent Pool</a></li>
+        <li><a href="#">Vetting</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Shop</a></li>
+      </ul>
+    </nav>
+
+    <section class="main-section">
+      <div class="container">
+        <div class="left-container">
+          <h1>
+            <span class="text-heading">The new,</span><br />
+            <span class="text-heading">smarter way to</span><br />
+            <span class="text-heading">contract web3 engineers</span><br />
+          </h1>
+          <p class="subsection-text">
+            onBench is the first dedicated staff augmentation platform dedicated
+            to hiring web3 developers based in South East Asia
+          </p>
+          <div class="button-container">
+            <button class="button button-hire" style="margin-right: 100px">
+              Hire Engineers
+            </button>
+            <button class="button button-watch">Watch Video</button>
+          </div>
+        </div>
+        <div class="right-container">
+          <img src="/assets/cover/coverImage.webp" alt="Image" />
+        </div>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-header">
+            <div class="profile-picture">
+              <img src="/assets/profiles/profile1.webp" alt="Profile Picture" />
+            </div>
+            <div class="card-header-text">
+              <h2 class="username">Umair Tahir</h2>
+              <p class="description">
+                This is a paragraph to write about the profile (description)
+              </p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">NodeJS</span>
+              <span class="tag">React</span>
+              <span class="tag">IOS</span>
+              <span class="tag">WebAPI</span>
+              <span class="tag">.Net</span>
+            </div>
+            <a href="#" class="view-profile">View Profile</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="profile-picture">
+              <img
+                src="./assets/profiles/profile1.webp"
+                alt="Profile Picture"
+              />
+            </div>
+            <div class="card-header-text">
+              <h2 class="username">Umair Tahir</h2>
+              <p class="description">
+                This is a paragraph to write about the profile (description)
+              </p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">NodeJS</span>
+              <span class="tag">React</span>
+              <span class="tag">IOS</span>
+              <span class="tag">WebAPI</span>
+              <span class="tag">.Net</span>
+            </div>
+            <a href="#" class="view-profile">View Profile</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="profile-picture">
+              <img
+                src="/assets//profiles/profile1.webp"
+                alt="Profile Picture"
+              />
+            </div>
+            <div class="card-header-text">
+              <h2 class="username">Umair Tahir</h2>
+              <p class="description">
+                This is a paragraph to write about the profile (description)
+              </p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">NodeJS</span>
+              <span class="tag">React</span>
+              <span class="tag">IOS</span>
+              <span class="tag">WebAPI</span>
+              <span class="tag">.Net</span>
+            </div>
+            <a href="#" class="view-profile">View Profile</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="profile-picture">
+              <img src="/assets/profiles/profile1.webp" alt="Profile Picture" />
+            </div>
+            <div class="card-header-text">
+              <h2 class="username">Umair Tahir</h2>
+              <p class="description">
+                This is a paragraph to write about the profile (description)
+              </p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="tags">
+              <span class="tag">C++</span>
+              <span class="tag">NodeJS</span>
+              <span class="tag">React</span>
+              <span class="tag">IOS</span>
+              <span class="tag">WebAPI</span>
+              <span class="tag">.Net</span>
+            </div>
+            <a href="#" class="view-profile">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+    <section class="section-slider">
+      <div class="container-slider" id="slider">
+        <div class="card-slider" onclick="showOverlay(this)">
+          <img src="/assets//slides/slide1.webp" alt="Image 1" />
+        </div>
+        <div class="card-slider" onclick="showOverlay(this)">
+          <img src="/assets//slides/slide2.webp" alt="Image 2" />
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+      <div class="overlay" id="overlay">
+        <span class="close-btn" onclick="hideOverlay()">X</span>
+        <img src="" alt="Overlay Image" id="overlay-image" />
+        <button class="prev-btn" onclick="showPrevImage()">&#10094;</button>
+        <button class="next-btn" onclick="showNextImage()">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="section-profile">
+      <div class="card-info">
+        <div class="header-info">The Old Method</div>
+        <div class="image-info">
+          <img src="/assets/cover/coverProfile1.webp" alt="Image" />
+        </div>
+        <div class="content-info">
+          <h3>Do the tedious search and risk all with a single agency</h3>
+          <ul>
+            <li>
+              Spend days looking for recommendations and doing Google searches
+            </li>
+            <li>
+              Juggle multiple email threads and calls with individual
+              development agencies
+            </li>
+            <li>
+              Waste time on candidates whose skills don't match their CVs,
+              talent the agencies have to "utilize"
+            </li>
+            <li>
+              Negotiate custom contracts and minimum commitments with each of
+              the development agencies
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="header-info">The Old Method</div>
+        <div class="image-info">
+          <img src="/assets/cover/coverProfile1.webp" alt="Image" />
+        </div>
+        <div class="content-info">
+          <h3>Do the tedious search and risk all with a single agency</h3>
+          <ul>
+            <li>
+              Spend days looking for recommendations and doing Google searches
+            </li>
+            <li>
+              Juggle multiple email threads and calls with individual
+              development agencies
+            </li>
+            <li>
+              Waste time on candidates whose skills don't match their CVs,
+              talent the agencies have to "utilize"
+            </li>
+            <li>
+              Negotiate custom contracts and minimum commitments with each of
+              the development agencies
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-call">
+        <div class="header-call">
+          <h2>Ready to contract talent in a new, smarter way with YouTeam?</h2>
+        </div>
+        <div class="button-container-call">
+          <button class="button-call">Shedule a Call</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-world">
+      <div class="subsection-world">
+        <h2>Network</h2>
+        <p>
+          Your single point of access to a combined talent pool of 500+ top
+          development agencies located in Latin America and Europe.
+        </p>
+        <a href="#" class="button-world">How YouTeam's vetting works →</a>
+      </div>
+      <div class="image-info">
+        <img src="/assets/cover/coverWorldMap.png" alt="Image" />
+      </div>
+      <div class="subsection-world">
+        <h2>Talent</h2>
+        <p>
+          Remote teammates, seamlessly embedded into your engineering
+          organization.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-talent">
+      <h2>YouTeam’s talent pool:</h2>
+      <ul class="talent-list">
+        <li>50,000+ vetted engineers</li>
+        <li>mid- and senior-level</li>
+        <li>confident English speakers</li>
+        <li>available for full-time, long-term engagements</li>
+        <li>experienced with remote work in fast-paced environments</li>
+        <li>adjusted work schedule for better time overlap</li>
+      </ul>
+      <div class="overlay-talent">
+        <div class="card-talent">
+          <div class="card-talent-main">
+            <div class="card-talent-sub">
+              <div class="card-talent-picture">
+                <img
+                  src="/assets/profiles/profile1.webp"
+                  alt="Profile Picture"
+                />
+              </div>
+              <div class="card-info-talent">
+                <h3>Sheeba Khan</h3>
+                <p>Designer</p>
+                <hr />
+                <p>
+                  <span>
+                    <svg
+                      preserveAspectRatio="xMidYMid meet"
+                      fill="#11da9f"
+                      data-bbox="45.747 19.975 108.522 160.025"
+                      viewBox="45.747 19.975 108.522 160.025"
+                      height="22"
+                      width="22"
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-type="color"
+                      role="presentation"
+                      aria-hidden="true"
+                    >
+                      <g>
+                        <path
+                          d="M104.5 180h-8.9c0-15.7-19.4-44.4-32.2-63.5-5.2-7.7-9.2-13.7-11.3-17.7-11.8-21.7-6.8-49.2 12-65.4 20.5-17.9 51.5-17.9 72 0 5.2 4.5 9.5 10 12.6 16.2 7.7 15.5 7.4 33.9-.8 49.2-2 3.9-6.1 10-11.3 17.7-12.7 19.1-32.1 47.8-32.1 63.5z"
+                          fill="##11da9f"
+                          data-color="1"
+                        ></path>
+                        <path
+                          fill="#FFFFFF"
+                          d="M117.3 74.7c0 9.555-7.745 17.3-17.3 17.3s-17.3-7.745-17.3-17.3 7.745-17.3 17.3-17.3 17.3 7.745 17.3 17.3z"
+                          data-color="2"
+                        ></path>
+                      </g>
+                    </svg> </span
+                  >Lahore
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-talent">
+          <div class="card-talent-main">
+            <div class="card-talent-sub">
+              <div class="card-talent-picture">
+                <img
+                  src="/assets/profiles/profile1.webp"
+                  alt="Profile Picture"
+                />
+              </div>
+              <div class="card-info-talent">
+                <h3>Sheeba Khan</h3>
+                <p>Designer</p>
+                <hr />
+                <p>
+                  <span>
+                    <svg
+                      preserveAspectRatio="xMidYMid meet"
+                      fill="#11da9f"
+                      data-bbox="45.747 19.975 108.522 160.025"
+                      viewBox="45.747 19.975 108.522 160.025"
+                      height="22"
+                      width="22"
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-type="color"
+                      role="presentation"
+                      aria-hidden="true"
+                    >
+                      <g>
+                        <path
+                          d="M104.5 180h-8.9c0-15.7-19.4-44.4-32.2-63.5-5.2-7.7-9.2-13.7-11.3-17.7-11.8-21.7-6.8-49.2 12-65.4 20.5-17.9 51.5-17.9 72 0 5.2 4.5 9.5 10 12.6 16.2 7.7 15.5 7.4 33.9-.8 49.2-2 3.9-6.1 10-11.3 17.7-12.7 19.1-32.1 47.8-32.1 63.5z"
+                          fill="##11da9f"
+                          data-color="1"
+                        ></path>
+                        <path
+                          fill="#FFFFFF"
+                          d="M117.3 74.7c0 9.555-7.745 17.3-17.3 17.3s-17.3-7.745-17.3-17.3 7.745-17.3 17.3-17.3 17.3 7.745 17.3 17.3z"
+                          data-color="2"
+                        ></path>
+                      </g>
+                    </svg> </span
+                  >Lahore
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-process">
+      <div class="left-side-process">
+        <h2>Matching Process</h2>
+        <h3>Get the right talent on board, every time.</h3>
+        <div class="list-item-process">
+          <p><strong>Day 1</strong> Share your requirements</p>
+        </div>
+        <div class="list-item-process">
+          <p><strong>Day 3</strong> Meet the right candidates</p>
+        </div>
+        <div class="list-item-process">
+          <p><strong>Day 7</strong> Hire and work with confidence</p>
+        </div>
+      </div>
+      <div class="right-side-process">
+        <div class="card-process">
+          <img src="/assets/cover/processCardImage.webp" alt="Card Image" />
+          <div class="card-info-process">
+            <h2>Your Matching Expert is with you every step of the way</h2>
+            <p>
+              YouTeam automates contract signing and invoicing through its
+              secure system. Your dedicated Matching Expert stays with you
+              throughout the collaboration with contractors: helps with
+              onboarding, scaling the team up or down, replacements, and any
+              questions that come up.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-contractor">
+      <div>
+        <p>Work with contractors that are excited about working with you</p>
+      </div>
+
+      <div class="section-contractor-sub">
+        <div class="card-contractor">
+          <div class="card-content-contractor">
+            <div class="card-talent-picture" style="height: 163px">
+              <img src="/assets/profiles/profile1.webp" alt="Profile Picture" />
+            </div>
+            <div class="card-info-talent">
+              <h3>Sheeba Khan</h3>
+              <p style="color: #605e5e">Designer</p>
+              <p style="color: #605e5e">
+                <span>
+                  <svg
+                    data-bbox="37.5 20 125 160"
+                    viewBox="0 0 200 200"
+                    height="25"
+                    width="25"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-type="shape"
+                    style="background: #11da9f; border-radius: 6px"
+                  >
+                    <g>
+                      <path
+                        fill="##11da9f"
+                        d="M133.406 122.514c-1.964 3.418-.718 7.826 2.777 9.632 7.917 4.09 12.427 9.062 12.427 13.059 0 8.311-19.389 20.877-48.611 20.877-29.223 0-48.611-12.566-48.611-20.877 0-4.009 4.533-8.996 12.491-13.094 3.507-1.806 4.754-6.229 2.777-9.651a6.95 6.95 0 0 0-9.213-2.693C45.188 126.114 37.5 135.15 37.5 145.206 37.5 164.42 65.481 180 100 180s62.5-15.58 62.5-34.794c0-10.033-7.656-19.053-19.867-25.397a6.95 6.95 0 0 0-9.227 2.705z"
+                      ></path>
+                      <path
+                        fill="##11da9f"
+                        d="M100 20c-24.296 0-43.992 19.737-43.992 44.083a43.895 43.895 0 0 0 4.823 20.022c.11.216.231.427.359.633l32.923 53.004c2.716 4.372 9.057 4.372 11.773 0l32.923-53.004c.128-.206.249-.417.359-.633a43.898 43.898 0 0 0 4.823-20.022C143.992 39.737 124.296 20 100 20zm9.127 57.962c-14.009 9.714-29.286-5.595-19.592-19.632a5.329 5.329 0 0 1 1.338-1.341c14.009-9.717 29.288 5.594 19.593 19.632a5.382 5.382 0 0 1-1.339 1.341z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                Location
+              </p>
+            </div>
+          </div>
+          <p>
+            I feel inspired because I get to work on bold new ideas. It's also
+            great to hear feedback from and be mentored by a seasoned VP
+            Engineering!
+          </p>
+        </div>
+        <div class="card-contractor">
+          <div class="card-content-contractor">
+            <div class="card-talent-picture" style="height: 163px">
+              <img src="/assets/profiles/profile1.webp" alt="Profile Picture" />
+            </div>
+            <div class="card-info-talent">
+              <h3>Sheeba Khan</h3>
+              <p style="color: #605e5e">Designer</p>
+              <p style="color: #605e5e">
+                <span>
+                  <svg
+                    data-bbox="37.5 20 125 160"
+                    viewBox="0 0 200 200"
+                    height="25"
+                    width="25"
+                    xmlns="http://www.w3.org/2000/svg"
+                    data-type="shape"
+                    style="background: #11da9f; border-radius: 6px"
+                  >
+                    <g>
+                      <path
+                        fill="##11da9f"
+                        d="M133.406 122.514c-1.964 3.418-.718 7.826 2.777 9.632 7.917 4.09 12.427 9.062 12.427 13.059 0 8.311-19.389 20.877-48.611 20.877-29.223 0-48.611-12.566-48.611-20.877 0-4.009 4.533-8.996 12.491-13.094 3.507-1.806 4.754-6.229 2.777-9.651a6.95 6.95 0 0 0-9.213-2.693C45.188 126.114 37.5 135.15 37.5 145.206 37.5 164.42 65.481 180 100 180s62.5-15.58 62.5-34.794c0-10.033-7.656-19.053-19.867-25.397a6.95 6.95 0 0 0-9.227 2.705z"
+                      ></path>
+                      <path
+                        fill="##11da9f"
+                        d="M100 20c-24.296 0-43.992 19.737-43.992 44.083a43.895 43.895 0 0 0 4.823 20.022c.11.216.231.427.359.633l32.923 53.004c2.716 4.372 9.057 4.372 11.773 0l32.923-53.004c.128-.206.249-.417.359-.633a43.898 43.898 0 0 0 4.823-20.022C143.992 39.737 124.296 20 100 20zm9.127 57.962c-14.009 9.714-29.286-5.595-19.592-19.632a5.329 5.329 0 0 1 1.338-1.341c14.009-9.717 29.288 5.594 19.593 19.632a5.382 5.382 0 0 1-1.339 1.341z"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                Location
+              </p>
+            </div>
+          </div>
+          <p>
+            YouTeam delivered a great opportunity for me. I'm delighted with the
+            team and the project, I'm learning new technologies while improving
+            my communication skills and business acumen.
+          </p>
+        </div>
+      </div>
+      <div class="button-div-contractor">
+        <a href="#" class="button-world"
+          >How YouTeam finds the absolute best engineers for the job →</a
+        >
+      </div>
+      <div class="heading-div-contractor">
+        <h2>Say goodbye to admin headaches</h2>
+        <a href="#" class="button-world"
+          >Learn more about Contracts & Payments on YouTeam →</a
+        >
+      </div>
+
+      <div class="card-container-feature">
+        <div class="card-feature">
+          <img src="/assets/Icons/iconFile.webp" alt="Image 1" />
+          <div class="text-container-feature">
+            <p>Standardized, compliant contracts across localities</p>
+          </div>
+        </div>
+        <div class="card-feature">
+          <img src="/assets/Icons/IconDocuments.png" alt="Image 2" />
+          <div class="text-container-feature">
+            <p>Automatic payroll handling and currency conversion</p>
+          </div>
+        </div>
+        <div class="card-feature">
+          <img src="/assets/Icons/IconBadge.webp" alt="Image 3" />
+          <div class="text-container-feature">
+            <p>Ongoing Customer Success</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>The YouTeam Guarantee</h2>
+        <p>Outsourcing has never been so safe.</p>
+      </div>
+    </section>
+  </body>
+</html>
